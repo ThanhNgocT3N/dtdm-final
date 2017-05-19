@@ -20,8 +20,8 @@ public class adapter{
 		ResultSet rs;	
 		try
 		{
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hello","root","1234");
-			//con=DriverManager.getConnection(s.getSQL(),s.getName(),s.getPass());
+			//con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hello","root","1234");
+			con=DriverManager.getConnection(s.getSQL(),s.getName(),s.getPass());
 			stm=con.createStatement();
 			rs=stm.executeQuery("select * from hello");
 			
